@@ -17,7 +17,8 @@ export default [
   ...compat.extends(
     "eslint:recommended",
     "plugin:vue/vue3-recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
   ),
   {
     plugins: {
@@ -32,6 +33,8 @@ export default [
 
     rules: {
       "vue/require-default-prop": "error",
+      "no-console": ["error", { allow: ["info", "warn", "error"] }],
+      "tailwindcss/classnames-order": "error",
     },
   },
 ]

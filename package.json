@@ -10,12 +10,15 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "lint:fix": "eslint . --fix && prettier --write --list-different ."
+    "lint:fix": "eslint . --fix && prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.17.0",
     "@vitejs/plugin-vue": "^5.2.1",
@@ -23,8 +26,10 @@
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
