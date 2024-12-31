@@ -7,11 +7,18 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
-    "lint:fix": "eslint . --fix && prettier --write .",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.(vue|ts|js)": [
+      "prettier --write"
+    ],
+    "src/**/*.(json|css|md)|.(prettierrc)": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "vue": "^3.5.13"
@@ -30,6 +37,7 @@
     "eslint-plugin-vue": "^9.32.0",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
